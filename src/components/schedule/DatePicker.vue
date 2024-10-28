@@ -130,12 +130,11 @@ const selectMonth = (month) => {
     z-index: 1;
 
     border-bottom: 1px solid #F3F3F3;
-    /* background-color: #F3F3F3; */
     background: #fff;
 }
 
 .picker {
-    padding: 10px 0;
+    padding-bottom: 10px;
 }
 
 .swiper {
