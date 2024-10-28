@@ -38,32 +38,34 @@ const centerSelectedDate = (swiperRef, date, center, seconds = 1000) => {
 
 const setSwiperRefDay = (swiper) => {
     swiperRefDay.value = swiper;
+    centerSelectedDate(swiperRefDay, 29, 2) // because first time some items no display
     userDay.value = props.currentDay
-    centerSelectedDate(swiperRefDay, props.currentDay, 4)
+    centerSelectedDate(swiperRefDay, props.currentDay, 3)
 };
 
 const setSwiperRefMonth = (swiper) => {
     swiperRefMonth.value = swiper;
     userMonth.value = props.currentMonth
-    centerSelectedDate(swiperRefMonth, props.currentMonth, 2)
+    centerSelectedDate(swiperRefMonth, props.currentMonth, 1)
 };
 
 const selectDay = (day) => {
     userDay.value = day
-    centerSelectedDate(swiperRefDay, day, 4)
+    emits('updateDatePicker', `${userMonth.value}`, `${userDay.value}`)
+
+    centerSelectedDate(swiperRefDay, day, 1)
 }
 
 const selectMonth = (month) => {
     userMonth.value = month
-    emits('updateDatePicker', `${month}`)
+    emits('updateDatePicker', `${userMonth.value}`, `${userDay.value}`)
 
     if (month == 2 && userDay.value >= 29) {
         userDay.value = 15
-        centerSelectedDate(swiperRefDay, userDay.value, 4)
+        centerSelectedDate(swiperRefDay, userDay.value, 1)
     }
     
-    if (month != 1) centerSelectedDate(swiperRefMonth, month, 2)
-
+    centerSelectedDate(swiperRefMonth, month, 1)
 }
 
 // @realIndexChange="swiperChange()"
@@ -75,7 +77,7 @@ const selectMonth = (month) => {
         <div class="picker">
 
             <swiper class="mySwiper" @swiper="setSwiperRefMonth"
-                :centeredSlidesBounds="true"
+                :centeredSlides="true"
                 :slides-per-view="3" 
                 :space-between="0"
                 :speed="500"
@@ -93,7 +95,7 @@ const selectMonth = (month) => {
             </swiper>
 
             <swiper class="wiper" @swiper="setSwiperRefDay"
-                :centeredSlidesBounds="true"
+                :centeredSlides="true"
                 :slides-per-view="7" 
                 :space-between="0"
                 :speed="500"
@@ -107,6 +109,7 @@ const selectMonth = (month) => {
                         :style="{
                             background: userDay == index+1 ? '#08327d' : 'none',
                             color: userDay == index+1 ? 'white' : 'black',
+                            border: true ? '1px solid black' : 'none',
                         }" 
                     >
                         {{ index+1 }}
@@ -120,6 +123,13 @@ const selectMonth = (month) => {
 
 <style scoped>
 .date-picker {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    z-index: 1;
+
+    border-bottom: 1px solid #F3F3F3;
     /* background-color: #F3F3F3; */
     background: #fff;
 }
@@ -157,8 +167,12 @@ const selectMonth = (month) => {
     border-radius: 6px;
 }
 .days-el {
-    display: inline-block;
-    padding: 3px 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
     border-radius: 100%;
 }
 </style>
