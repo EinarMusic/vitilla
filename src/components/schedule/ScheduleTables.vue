@@ -3,6 +3,21 @@
 </script>
 
 <template>
+    <!-- <div>
+        <div v-for="a in 10">
+
+            <div style="display: flex;">
+                <div>
+                    <span>ranie</span>
+                </div>
+                <div style="border: 1px solid red;min-width: 500px;overflow: scroll;white-space: nowrap;">
+                    <span>{{ a }}</span>
+                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloremque eveniet numquam corporis, ab delectus nihil asperiores perspiciatis dolor ipsam explicabo aliquam, qui reiciendis fuga? Aspernatur voluptatem officiis distinctio dolor!</span>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
     <div class="calender">
         <div class="individual-games">
 
@@ -20,12 +35,15 @@
                         </div>
                     </div>
 
-                    <div class="game-info">
-                        <div class="matchup-date">8:00 PM</div>
-                        <!-- <div class="matchup-result">ÁGU 3 - ESC 1</div> -->
-                        <div class="matchup-pitchers">C. Rodon vs T. Bibee</div>
-                        <!-- <div class="winner-pitcher">C. Rodon</div> -->
+                    <div class="wrap-game-info">
+                        <div class="game-info">
+                            <div class="matchup-date">8:00 PM</div>
+                            <div class="matchup-result">ÁGU 3 - ESC 1</div>
+                            <div class="winner-pitcher">C. Rodon</div>
+                            <div class="matchup-pitchers">C. Rodon vs T. Bibee</div>
+                        </div>
                     </div>  
+
                 </div>
 
             </div>
@@ -34,37 +52,21 @@
 </template>
 
 <style scoped>
+
 .calender {
     margin-top: 115px;
     padding: 0 0 3px 0;
     background-color: #F3F3F3;
-
-    width: 100%;
-    overflow: scroll;
-}
-
-.individual-games {
-    /* max-width: 500px; */
-    width: 100%;
-    overflow: scroll;
 }
 
 .wrap-info {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 100%;
-    
-    margin-top: 2px;
-    padding: 15px 0 15px 15px;
-
-    background-color: white;
-}
-
-.team-matchup {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    
+    margin-top: 2px;
+
+    background-color: white;
 }
 
 .team-info {
@@ -72,25 +74,28 @@
     align-items: center;
     justify-content: space-between;
 
+    margin-left: 15px;
+
     width: 80px;
     font-size: 12px;
 }
 
-.visit-team, .home-team {
-    width: 24px;
-    height: 24px;
+.wrap-game-info, .team-info {
+    padding: 15px 0;
 }
-.visit-team img, .home-team img{
+
+.visit-team, .home-team, .visit-team img, .home-team img {
     width: 24px;
     height: 24px;
 }
 
-.game-info {
+.wrap-game-info {
     display: flex;
+    flex-wrap: nowrap;
     flex: 1;
 
     overflow: scroll;
-    /* min-width: 900px; */
+    white-space: nowrap;
 
     margin-left: 20px;
 
@@ -99,7 +104,23 @@
     letter-spacing: 0.4px;
 }
 
-.matchup-date, .matchup-result, .matchup-pitchers, .winner-pitcher {
+.game-info div {
+    display: inline;
+    overflow-x: auto;
+    white-space: nowrap;
+
     margin-right: 20px;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.wrap-game-info::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrap-game-info {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 </style>
