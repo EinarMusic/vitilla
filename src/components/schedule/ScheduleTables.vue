@@ -3,21 +3,6 @@
 </script>
 
 <template>
-    <!-- <div>
-        <div v-for="a in 10">
-
-            <div style="display: flex;">
-                <div>
-                    <span>ranie</span>
-                </div>
-                <div style="border: 1px solid red;min-width: 500px;overflow: scroll;white-space: nowrap;">
-                    <span>{{ a }}</span>
-                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloremque eveniet numquam corporis, ab delectus nihil asperiores perspiciatis dolor ipsam explicabo aliquam, qui reiciendis fuga? Aspernatur voluptatem officiis distinctio dolor!</span>
-                </div>
-            </div>
-
-        </div>
-    </div> -->
     <div class="calender">
         <div class="individual-games">
 
@@ -47,6 +32,7 @@
                 </div>
 
             </div>
+            
         </div>
     </div>
 </template>

@@ -6,6 +6,7 @@ import ScheduleTables from '../components/schedule/ScheduleTables.vue';
 import { ref } from "vue"
 import { months, currentDate, generateDatePicker } from "../composables/schedule.js"
 
+
 const schedule = ref({monthsDisplay: months})
 const [currentYear, currentMonth, currentDay] = currentDate
 

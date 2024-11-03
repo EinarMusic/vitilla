@@ -1,11 +1,12 @@
 <script setup>
+import Standings from "./views/Standings.vue";
 import Calender from './views/Calender.vue';
 
 </script>
 
 <template>
-  <Calender />
+  <Standings />
+  <!-- <Calender /> -->
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
