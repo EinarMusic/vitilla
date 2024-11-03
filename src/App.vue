@@ -1,12 +1,15 @@
-<script setup>
-import Standings from "./views/Standings.vue";
-import Calender from './views/Calender.vue';
-
-</script>
+<script setup></script>
 
 <template>
-  <Standings />
-  <!-- <Calender /> -->
+  <div>
+    <router-view />
+
+    <div style="display: flex;justify-content: space-between;">
+      <router-link to="/"><span>Calender</span></router-link>
+      <router-link to="/stand"><span>Standing</span></router-link>
+    </div>
+
+  </div>
 </template>
 
 <style scoped></style>

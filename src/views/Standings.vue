@@ -1,4 +1,5 @@
 <script setup>
+import YearPicker from '../components/YearPicker.vue';
 import StandingsTable from '../components/standings/StandingsTable.vue';
 
 import { ref } from "vue"
@@ -42,6 +43,7 @@ standing.value = [
 
 <template>
     <div>
+        <YearPicker />
         <div class="wrap-tables">
 
             <div class="wrap-table-left-side">
@@ -95,7 +97,7 @@ standing.value = [
     display: flex;
     width: 100%;
 
-    margin-top: 108px;
+    margin-top: 59px;
 
     /* border: 1px solid red; */
     padding-top: 10px;
