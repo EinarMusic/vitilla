@@ -41,7 +41,8 @@
 
 .calender {
     margin-top: 108px;
-    padding: 0 0 3px 0;
+    padding: 1px 0 5px 0;
+    border-radius: 5px;
     background-color: #F3F3F3;
 }
 
@@ -50,9 +51,11 @@
     align-items: center;
     justify-content: space-between;
     
-    margin-top: 2px;
+    margin: 5px 5px 0 5px;
+    /* margin-top: 2px; */
 
     background-color: white;
+    border-radius: 5px;
 }
 
 .team-info {

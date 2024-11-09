@@ -1,9 +1,19 @@
 import { ref } from "vue"
 
+{/* <th>W</th>
+                        <th>L</th>
+                        <th>PTC</th>
+                        <th>WCGB</th>
+                        <th>L10</th>
+                        <th>STRK</th>
+                        <th>RS</th>
+                        <th>RA</th>
+                        <th>DIFF</th> */}
+
 export const standing = ref([
     {   
             logo: 'https://midfield.mlbstatic.com/v1/team/119/spots/72',
-            name: 'LAD',   
+            name: 'LAD - W',   
             stats: {
                 W: '90',
                 L: '87',
@@ -18,7 +28,7 @@ export const standing = ref([
     },
     {
             logo: 'https://midfield.mlbstatic.com/v1/team/110/spots/72',
-            name: 'BAL',
+            name: 'BAL - w',
             stats: {
                 W: '80',
                 L: '77',
@@ -33,7 +43,7 @@ export const standing = ref([
     },
     {   
             logo: 'https://midfield.mlbstatic.com/v1/team/119/spots/72',
-            name: 'LAD',   
+            name: 'LAD - w',   
             stats: {
                 W: '90',
                 L: '87',
@@ -48,7 +58,7 @@ export const standing = ref([
     },
     {
             logo: 'https://midfield.mlbstatic.com/v1/team/110/spots/72',
-            name: 'BAL',
+            name: 'BAL - w',
             stats: {
                 W: '80',
                 L: '77',
@@ -63,7 +73,7 @@ export const standing = ref([
     },
     {   
             logo: 'https://midfield.mlbstatic.com/v1/team/119/spots/72',
-            name: 'LAD',   
+            name: 'LAD - w',   
             stats: {
                 W: '90',
                 L: '87',
@@ -78,7 +88,7 @@ export const standing = ref([
     },
     {
             logo: 'https://midfield.mlbstatic.com/v1/team/110/spots/72',
-            name: 'BAL',
+            name: 'BAL - w',
             stats: {
                 W: '80',
                 L: '77',
@@ -93,7 +103,7 @@ export const standing = ref([
     },
     {   
             logo: 'https://midfield.mlbstatic.com/v1/team/119/spots/72',
-            name: 'LAD',   
+            name: 'LAD - w',   
             stats: {
                 W: '90',
                 L: '87',
@@ -108,7 +118,7 @@ export const standing = ref([
     },
     {
             logo: 'https://midfield.mlbstatic.com/v1/team/110/spots/72',
-            name: 'BAL',
+            name: 'BAL - w',
             stats: {
                 W: '80',
                 L: '77',
@@ -123,7 +133,7 @@ export const standing = ref([
     },
     {   
             logo: 'https://midfield.mlbstatic.com/v1/team/119/spots/72',
-            name: 'LAD',   
+            name: 'LAD - w',   
             stats: {
                 W: '90',
                 L: '87',
@@ -138,7 +148,7 @@ export const standing = ref([
     },
     {
             logo: 'https://midfield.mlbstatic.com/v1/team/110/spots/72',
-            name: 'BAL',
+            name: 'BAL - w',
             stats: {
                 W: '80',
                 L: '77',
@@ -153,7 +163,7 @@ export const standing = ref([
     },
     {   
             logo: 'https://midfield.mlbstatic.com/v1/team/119/spots/72',
-            name: 'LAD',   
+            name: 'LAD - w',   
             stats: {
                 W: '90',
                 L: '87',
@@ -168,7 +178,7 @@ export const standing = ref([
     },
     {
             logo: 'https://midfield.mlbstatic.com/v1/team/110/spots/72',
-            name: 'BAL',
+            name: 'BAL - w',
             stats: {
                 W: '80',
                 L: '77',

@@ -131,6 +131,7 @@ const selectMonth = (month) => {
 
     border-bottom: 1px solid #F3F3F3;
     background: #fff;
+    border-radius: 5px;
 }
 
 .picker {

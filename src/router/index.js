@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Calender from "../views/Calender.vue";
 import Standings from "../views/Standings.vue";
+import BoxScore from "../views/BoxScore.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,6 +14,10 @@ const router = createRouter({
     {
       path: "/stand",
       component: Standings,
+    },
+    {
+      path: "/box",
+      component: BoxScore,
     },
   ],
 });
